@@ -16,7 +16,7 @@
 
 - name: Change kernel parameters
   sysctl: name="{{ item.key }}" value="{{ item.value }}" state=present
-  with_dict: oracle_database_kernel_params
+  with_dict: "{{ oracle_database_kernel_params }}"
 
 # ==> Create users and groups
 - name: Create groups
